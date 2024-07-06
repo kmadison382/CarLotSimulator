@@ -27,10 +27,11 @@ namespace CarLotSimulator
             oldCar.HonkNoise = "beep beep";
             oldCar.IsDriveable = false;
 
-            carLot.AddCar(oldCar);
+            CarLot.GetNumberOfCars();
 
             var newCar = new Car(2020, "Chevy", "Tahoe", "vroom!", "beeeeee!", true);
-            carLot.AddCar(newCar);
+
+            CarLot.GetNumberOfCars();
 
             var futureCar = new Car()
             {
@@ -41,12 +42,9 @@ namespace CarLotSimulator
                 HonkNoise = "dwoo-ding!",
                 IsDriveable = true,
             };
-            carLot.AddCar(futureCar);
+            CarLot.GetNumberOfCars();
 
-            foreach (Car car in carLot.Cars)
-            {
-                Console.WriteLine($"Here is a vehicle made in {car.Year} by {car.Make}, called the {car.Model}.");
-            }
+            CarLot.ShowOffCars();
 
             //*************BONUS*************//
 
